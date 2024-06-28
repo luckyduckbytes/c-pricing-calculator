@@ -1,11 +1,8 @@
-* {
-    box-sizing: border-box;
-}
-
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #000;  /* Set background color to pitch black */
-    color: #fff;  /* Set text color to white */
+    background-color: #000;
+    color: #fff;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -17,10 +14,10 @@ body {
 }
 
 .container {
-    background-color: #000;  /* Pitch black for the container */
+    background-color: #000;
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);  /* Slight shadow to stand out */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
     max-width: 800px;
     width: 100%;
     box-sizing: border-box;
@@ -28,7 +25,7 @@ body {
 }
 
 h1, h2, p {
-    color: #fff;  /* Ensure headers and paragraphs are white */
+    color: #fff;
 }
 
 form {
@@ -43,20 +40,20 @@ table {
 }
 
 table th, table td {
-    border: 1px solid #555;  /* Dark grey border for contrast */
+    border: 1px solid #555;
     padding: 12px;
     text-align: left;
     word-wrap: break-word;
-    color: #fff;  /* Ensure table text is white */
+    color: #fff;
 }
 
 table th {
-    background-color: #222;  /* Darker grey for table headers */
+    background-color: #222;
     font-weight: bold;
 }
 
 table tr:hover {
-    background-color: #333;  /* Slightly lighter grey for hover effect */
+    background-color: #333;
 }
 
 input[type="checkbox"], input[type="radio"] {
@@ -67,16 +64,16 @@ input[type="number"] {
     width: 60px;
     padding: 5px;
     margin-left: 10px;
-    background-color: #000;  /* Pitch black background for inputs */
-    color: #fff;  /* White text for inputs */
-    border: 1px solid #555;  /* Border color for inputs */
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #555;
 }
 
 button {
     padding: 15px;
     margin-top: 20px;
     border: none;
-    background-color: #28a745;
+    background-color: #444;
     color: #fff;
     border-radius: 5px;
     cursor: pointer;
@@ -86,12 +83,33 @@ button {
 }
 
 button:hover {
-    background-color: #218838;
+    background-color: #555;
 }
 
-#result {
-    margin-top: 20px;
-    font-size: 20px;
-    text-align: center;
-    color: #fff;
+button.clear-selection {
+    background-color: #444;
+}
+
+button.clear-selection:hover {
+    background-color: #555;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    
+    .container {
+        padding: 20px;
+    }
+
+    table th, table td {
+        padding: 8px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px;
+    }
 }
