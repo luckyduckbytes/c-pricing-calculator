@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;  /* Set background color to pitch black */
+    color: #fff;  /* Set text color to white */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.container {
+    background-color: #000;  /* Pitch black for the container */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);  /* Slight shadow to stand out */
+    max-width: 800px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: auto;
+}
+
+h1, h2, p {
+    color: #fff;  /* Ensure headers and paragraphs are white */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    border: 1px solid #555;  /* Dark grey border for contrast */
+    padding: 12px;
+    text-align: left;
+    word-wrap: break-word;
+    color: #fff;  /* Ensure table text is white */
+}
+
+table th {
+    background-color: #222;  /* Darker grey for table headers */
+    font-weight: bold;
+}
+
+table tr:hover {
+    background-color: #333;  /* Slightly lighter grey for hover effect */
+}
+
+input[type="checkbox"], input[type="radio"] {
+    margin-right: 10px;
+}
+
+input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    margin-left: 10px;
+    background-color: #000;  /* Pitch black background for inputs */
+    color: #fff;  /* White text for inputs */
+    border: 1px solid #555;  /* Border color for inputs */
+}
+
+button {
+    padding: 15px;
+    margin-top: 20px;
+    border: none;
+    background-color: #28a745;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+}

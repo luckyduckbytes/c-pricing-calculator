@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pricing Calculator</h1>
+
+        <h2>Subtotals</h2>
+        <div id="subtotals">
+            <p>Interior With Revit: $<span id="subtotal-interior-revit">0.00</span></p>
+            <p>Interior Without Revit: $<span id="subtotal-interior-no-revit">0.00</span></p>
+            <p>Exterior With Revit: $<span id="subtotal-exterior-revit">0.00</span></p>
+            <p>Exterior Without Revit: $<span id="subtotal-exterior-no-revit">0.00</span></p>
+            <p>Amenities, Environments & Others: $<span id="subtotal-amenities">0.00</span></p>
+        </div>
+
+        <form id="pricing-form">
+            <h2>Interior With Revit (or other 3D Models)</h2>
+            <button type="button" onclick="clearSelection('interior-revit')">Clear Selection</button>
+            <table>
+                <tr>
+                    <td><input type="radio" name="interior-revit" id="detached-semi-homes-revit" data-price="850"></td>
+                    <td>Detached (Semi) Homes</td>
+                    <td>$850.00</td>
+                    <td><input type="number" id="units-detached-semi-homes-revit" min="1" value="1"></td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="interior-revit" id="townhomes-revit" data-price="700"></td>
+                    <td>Townhomes</td>
+                    <td>$700.00</td>
+                    <td><input type="number" id="units-townhomes-revit" min="1" value="1"></td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="interior-revit" id="condos-apartments-revit" data-price="300"></td>
+                    <td>Condos/Apartments</td>
+                    <td>$300.00</td>
+                    <td><input type="number" id="units-condos-apartments-revit" min="1" value="1"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="revisions-revit" data-price="1000"></td>
+                    <td>Revisions</td>
+                    <td>$1000.00</td>
+                    <td><input type="number" id="units-revisions-revit" min="1" value="1"></td>
+                </tr>
+            </table>
+
+            <h2>Interior Without Revit (or other 3D Models)</h2>
+            <button type="button" onclick="clearSelection('interior-no-revit')">Clear Selection</button>
+            <table>
+                <tr>
+                    <td><input type="radio" name="interior-no-revit" id="detached-semi-homes-no-revit" data-price="2000"></td>
+                    <td>Detached (Semi) Homes</td>
+                    <td>$2000.00</td>
+                    <td><input type="number" id="units-detached-semi-homes-no-revit" min="1" value="1"></td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="interior-no-revit" id="townhomes-no-revit" data-price="1200"></td>
+                    <td>Townhomes</td>
+                    <td>$1200.00</td>
+                    <td><input type="number" id="units-townhomes-no-revit" min="1" value="1"></td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="interior-no-revit" id="condos-apartments-no-revit" data-price="750"></td>
+                    <td>Condos/Apartments</td>
+                    <td>$750.00</td>
+                    <td><input type="number" id="units-condos-apartments-no-revit" min="1" value="1"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="revisions-no-revit" data-price="1000"></td>
+                    <td>Revisions</td>
+                    <td>$1000.00</td>
+                    <td><input type="number" id="units-revisions-no-revit" min="1" value="1"></td>
+                </tr>
+            </table>
+
+            <h2>Exterior With Revit (or other 3D Models)</h2>
+            <button type="button" onclick="clearSelection('exterior-revit')">Clear Selection</button>
+            <table>
+                <tr>
+                    <td><input type="radio" name="exterior-revit" id="detached-semi-homes-exterior-revit" data-price="450"></td>
+                    <td>Detached (Semi) Homes</td>
+                    <td>$450.00</td>
+                    <td><input type="number" id="units-detached-semi-homes-exterior-revit" min="1" value="1"></td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="exterior-revit" id="townhome-block-exterior-revit" data-price="700"></td>
+                    <td>Townhome (Per Block)</td>
+                    <td>$700.00</td>
+                    <td><input type="number" id="units-townhome-block-exterior-revit" min="1" value="1"></td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="exterior-revit" id="building-mid-rise-exterior-revit" data-price="2000"></td>
+                    <td>Building (Mid-Rise)</td>
+                    <td>$2000.00</td>
+                    <td><input type="number" id="units-building-mid-rise-exterior-revit" min="1" value="1"></td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="exterior-revit" id="building-high-rise-exterior-revit" data-price="3500"></td>
+                    <td>Building (High-Rise)</td>
+                    <td>$3500.00</td>
+                    <td><input type="number" id="units-building-high-rise-exterior-revit" min="1" value="1"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="revisions-exterior-revit" data-price="1000"></td>
+                    <td>Revisions</td>
+                    <td>$1000.00</td>
+                    <td><input type="number" id="units-revisions-exterior-revit" min="1" value="1"></td>
+                </tr>
+            </table>
+
+            <h2>Exterior Without Revit</h2>
+            <button type="button" onclick="clearSelection('exterior-no-revit')">Clear Selection</button>
+            <table>
+                <tr>
+                    <td><input type="radio" name="exterior-no-revit" id="detached-semi-homes-exterior-no-revit" data-price="1800"></td>
+                    <td>Detached (Semi) Homes</td>
+                    <td>$1800.00</td>
+                    <td><input type="number" id="units-detached-semi-homes-exterior-no-revit" min="1" value="1"></td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="exterior-no-revit" id="townhome-block-exterior-no-revit" data-price="1800"></td>
+                    <td>Townhome (Per Block)</td>
+                    <td>$1800.00</td>
+                    <td><input type="number" id="units-townhome-block-exterior-no-revit" min="1" value="1"></td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="exterior-no-revit" id="building-mid-rise-exterior-no-revit" data-price="4000"></td>
+                    <td>Building (Mid-Rise)</td>
+                    <td>$4000.00</td>
+                    <td><input type="number" id="units-building-mid-rise-exterior-no-revit" min="1" value="1"></td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="exterior-no-revit" id="building-high-rise-exterior-no-revit" data-price="6500"></td>
+                    <td>Building (High-Rise)</td>
+                    <td>$6500.00</td>
+                    <td><input type="number" id="units-building-high-rise-exterior-no-revit" min="1" value="1"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="revisions-exterior-no-revit" data-price="1000"></td>
+                    <td>Revisions</td>
+                    <td>$1000.00</td>
+                    <td><input type="number" id="units-revisions-exterior-no-revit" min="1" value="1"></td>
+                </tr>
+            </table>
+
+            <h2>Amenities, Environments & Others</h2>
+            <table>
+                <tr>
+                    <td><input type="checkbox" id="amenities" data-price="2000"></td>
+                    <td>Amenities</td>
+                    <td>$2000.00</td>
+                    <td><input type="number" id="units-amenities" min="1" value="1"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="site-basic" data-price="0"></td>
+                    <td>Site: Basic Plot of Land</td>
+                    <td>$0</td>
+                    <td><input type="number" id="units-site-basic" min="1" value="1"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="site-trees" data-price="800"></td>
+                    <td>Site: Plot of Land with Trees</td>
+                    <td>$800.00</td>
+                    <td><input type="number" id="units-site-trees" min="1" value="1"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="site-detailed" data-price="3000"></td>
+                    <td>Site: Detailed Site Map</td>
+                    <td>$3000.00</td>
+                    <td><input type="number" id="units-site-detailed" min="1" value="1"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="site-architect" data-price="4500"></td>
+                    <td>Site: Detailed Map from Architect</td>
+                    <td>$4500.00</td>
+                    <td><input type="number" id="units-site-architect" min="1" value="1"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="neighbourhood-white" data-price="0"></td>
+                    <td>Neighbourhood: White Space</td>
+                    <td>$0</td>
+                    <td><input type="number" id="units-neighbourhood-white" min="1" value="1"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="neighbourhood-basic" data-price="2000"></td>
+                    <td>Neighbourhood: Basic Buildings</td>
+                    <td>$2000.00</td>
+                    <td><input type="number" id="units-neighbourhood-basic" min="1" value="1"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="neighbourhood-detailed" data-price="7500"></td>
+                    <td>Neighbourhood: Fully Detailed Environment</td>
+                    <td>$7500.00</td>
+                    <td><input type="number" id="units-neighbourhood-detailed" min="1" value="1"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="interior-package" data-price="0"></td>
+                    <td>Interior Packages from Database</td>
+                    <td>$0</td>
+                    <td><input type="number" id="units-interior-package" min="1" value="1"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="custom-interior" data-price="3000"></td>
+                    <td>Custom Interior Package</td>
+                    <td>$3000.00</td>
+                    <td><input type="number" id="units-custom-interior" min="1" value="1"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="3d-skus" data-price="10"></td>
+                    <td>3D SKUs for Decor</td>
+                    <td>$10.00</td>
+                    <td><input type="number" id="units-3d-skus" min="1" value="1"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="streaming-hours" data-price="6"></td>
+                    <td>Streaming Hours (Outside Tier)</td>
+                    <td>$6.00</td>
+                    <td><input type="number" id="units-streaming-hours" min="1" value="1"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="custom-integration" data-price="18000"></td>
+                    <td>Custom Integration</td>
+                    <td>$18000.00</td>
+                    <td><input type="number" id="units-custom-integration" min="1" value="1"></td>
+                </tr>
+            </table>
+
+            <div id="total">
+                <h2>Total: $<span id="total-price">0.00</span></h2>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
