@@ -93,10 +93,7 @@ function calculatePrice() {
         }
     });
 
-<<<<<<< HEAD
     // Update the UI with the calculated subtotals and total price
-=======
->>>>>>> 82a567345fbf97aea7303704756823c5adf81d06
     document.getElementById('subtotal-interior-revit').innerText = formatNumberWithCommas(subtotalInteriorRevit.toFixed(2));
     document.getElementById('subtotal-interior-no-revit').innerText = formatNumberWithCommas(subtotalInteriorNoRevit.toFixed(2));
     document.getElementById('subtotal-exterior-revit').innerText = formatNumberWithCommas(subtotalExteriorRevit.toFixed(2));
@@ -111,18 +108,10 @@ function clearSelection(sectionName) {
     radios.forEach((radio) => {
         radio.checked = false; // Uncheck each radio button
     });
-<<<<<<< HEAD
     calculatePrice(); // Recalculate the price
 }
 
 // Function to format a number with commas
 function formatNumberWithCommas(number) {
     return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","); // Add commas to the number
-=======
-    calculatePrice();
-}
-
-function formatNumberWithCommas(number) {
-    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
->>>>>>> 82a567345fbf97aea7303704756823c5adf81d06
 }
