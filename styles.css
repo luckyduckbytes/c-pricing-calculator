@@ -1,115 +1,148 @@
 /* General Styles */
+/* Styles for the body element */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #000;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    height: 100vh;
-    margin: 0;
-    padding: 20px;
-    box-sizing: border-box;
-    overflow-x: hidden;
+    font-family: Arial, sans-serif; /* Font family for the body */
+    background-color: #212422; /* Background color for the body */
+    color: #fff; /* Text color */
+    display: flex; /* Flexbox layout for the body */
+    justify-content: center; /* Center content horizontally */
+    align-items: flex-start; /* Align items to the start vertically */
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove default margin */
+    padding: 20px; /* Padding around the body */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    overflow-x: hidden; /* Hide horizontal overflow */
+    font-size: 16px; /* Default font size */
 }
 
+/* Styles for the container */
 .container {
-    background-color: #000;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
-    max-width: 800px;
-    width: 100%;
-    box-sizing: border-box;
-    overflow-x: auto;
+    background-color: #000; /* Background color */
+    padding: 30px; /* Padding inside the container */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Shadow effect */
+    max-width: 800px; /* Maximum width */
+    width: 100%; /* Full width */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    overflow-x: auto; /* Allow horizontal scrolling */
 }
 
-h1, h2, p {
-    color: #fff;
+/* Styles for h1 headers */
+h1 {
+    color: #fff; /* Text color */
+    font-size: 30px; /* Font size */
 }
 
+/* Styles for h2 headers */
+h2 {
+    color: #fff; /* Text color */
+    font-size: 20px; /* Font size */
+}
+
+/* Styles for paragraphs */
+p {
+    color: #fff; /* Text color */
+    font-size: 14px; /* Font size */
+}
+
+/* Styles for the form element */
 form {
-    display: flex;
-    flex-direction: column;
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Column layout */
 }
 
+/* Styles for tables */
 table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
+    width: 100%; /* Full width */
+    border-collapse: collapse; /* Collapse borders */
+    margin-bottom: 20px; /* Margin at the bottom */
 }
 
+/* Styles for table headers and cells */
 table th, table td {
-    border: 1px solid #555;
-    padding: 12px;
-    text-align: left;
-    word-wrap: break-word;
-    color: #fff;
+    border: 2px solid #555; /* Border around cells */
+    padding: 12px; /* Padding inside cells */
+    text-align: left; /* Align text to the left */
+    word-wrap: break-word; /* Wrap long words */
+    color: #fff; /* Text color */
+    font-size: 16px; /* Font size */
 }
 
+/* Styles for table headers */
 table th {
-    background-color: #222;
-    font-weight: bold;
+    background-color: #222; /* Background color */
+    font-weight: bold; /* Bold text */
+    font-size: 16px; /* Font size */
 }
 
+/* Hover effect for table rows */
 table tr:hover {
-    background-color: #333;
+    background-color: #333; /* Background color on hover */
 }
 
+/* Styles for checkbox and radio inputs */
 input[type="checkbox"], input[type="radio"] {
-    margin-right: 10px;
+    margin-right: 10px; /* Margin to the right */
 }
 
+/* Styles for number inputs */
 input[type="number"] {
-    width: 60px;
-    padding: 5px;
-    margin-left: 10px;
-    background-color: #000;
-    color: #fff;
-    border: 1px solid #555;
+    width: 60px; /* Width of the input */
+    padding: 5px; /* Padding inside the input */
+    margin-left: 10px; /* Margin to the left */
+    background-color: #000; /* Background color */
+    color: #fff; /* Text color */
+    border: 1px solid #555; /* Border around the input */
 }
 
+/* Styles for buttons */
 button {
-    padding: 15px;
-    margin-top: 20px;
-    border: none;
-    background-color: #444;
-    color: #fff;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    width: 100%;
-    transition: background-color 0.3s ease;
+    padding: 8px; /* Padding inside the button */
+    margin-top: 4px; /* Margin at the top */
+    border: none; /* No border */
+    background-color: #444; /* Background color */
+    color: #fff; /* Text color */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    font-size: 16px; /* Font size */
+    width: 100%; /* Full width */
+    transition: background-color 0.3s ease; /* Transition for background color */
 }
 
+/* Hover effect for buttons */
 button:hover {
-    background-color: #555;
+    background-color: #555; /* Background color on hover */
 }
 
+/* Additional styles for clear selection buttons */
 button.clear-selection {
-    background-color: #444;
+    background-color: #444; /* Background color */
 }
 
+/* Hover effect for clear selection buttons */
 button.clear-selection:hover {
-    background-color: #555;
+    background-color: #555; /* Background color on hover */
 }
 
 /* Responsive Styles */
+/* Styles for screens with a maximum width of 600px */
 @media (max-width: 600px) {
     body {
-        padding: 10px;
+        padding: 10px; /* Reduced padding */
+        font-size: 14px; /* Smaller font size */
     }
     
     .container {
-        padding: 20px;
+        padding: 20px; /* Reduced padding */
     }
 
     table th, table td {
-        padding: 8px;
+        padding: 8px; /* Reduced padding inside cells */
+        font-size: 12px; /* Smaller font size */
     }
 
     button {
-        font-size: 14px;
-        padding: 10px;
+        font-size: 14px; /* Smaller font size */
+        padding: 10px; /* Increased padding */
     }
 }
