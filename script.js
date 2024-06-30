@@ -80,14 +80,12 @@ function calculatePrice() {
         }
     });
 
-    document.getElementById('subtotal-interior-revit').innerText = subtotalInteriorRevit.toFixed(2);
-    document.getElementById('subtotal-interior-no-revit').innerText = subtotalInteriorNoRevit.toFixed(2);
-    document.getElementById('subtotal-exterior-revit').innerText = subtotalExteriorRevit.toFixed(2);
-    document.getElementById('subtotal-exterior-no-revit').innerText = subtotalExteriorNoRevit.toFixed(2);
-    document.getElementById('subtotal-amenities').innerText = subtotalAmenities.toFixed(2);
-    document.getElementById('total-price').innerText
-    document.getElementById('subtotal-amenities').innerText = subtotalAmenities.toFixed(2);
-    document.getElementById('total-price').innerText = totalPrice.toFixed(2);
+    document.getElementById('subtotal-interior-revit').innerText = formatNumberWithCommas(subtotalInteriorRevit.toFixed(2));
+    document.getElementById('subtotal-interior-no-revit').innerText = formatNumberWithCommas(subtotalInteriorNoRevit.toFixed(2));
+    document.getElementById('subtotal-exterior-revit').innerText = formatNumberWithCommas(subtotalExteriorRevit.toFixed(2));
+    document.getElementById('subtotal-exterior-no-revit').innerText = formatNumberWithCommas(subtotalExteriorNoRevit.toFixed(2));
+    document.getElementById('subtotal-amenities').innerText = formatNumberWithCommas(subtotalAmenities.toFixed(2));
+    document.getElementById('total-price').innerText = formatNumberWithCommas(totalPrice.toFixed(2));
 }
 
 function clearSelection(sectionName) {
@@ -96,4 +94,8 @@ function clearSelection(sectionName) {
         radio.checked = false;
     });
     calculatePrice();
+}
+
+function formatNumberWithCommas(number) {
+    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }

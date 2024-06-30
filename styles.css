@@ -1,7 +1,7 @@
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #000;
+    background-color: #212422;
     color: #fff;
     display: flex;
     justify-content: center;
@@ -11,6 +11,7 @@ body {
     padding: 20px;
     box-sizing: border-box;
     overflow-x: hidden;
+    font-size: 16px; /* Default font size */
 }
 
 .container {
@@ -24,8 +25,19 @@ body {
     overflow-x: auto;
 }
 
-h1, h2, p {
+h1 {
     color: #fff;
+    font-size: 30px; /* Font size for h1 */
+}
+
+h2 {
+    color: #fff;
+    font-size: 20px; /* Font size for h2 */
+}
+
+p {
+    color: #fff;
+    font-size: 14px; /* Font size for paragraphs */
 }
 
 form {
@@ -40,16 +52,18 @@ table {
 }
 
 table th, table td {
-    border: 1px solid #555;
+    border: 2px solid #555;
     padding: 12px;
     text-align: left;
     word-wrap: break-word;
     color: #fff;
+    font-size: 16px; /* Font size for table text */
 }
 
 table th {
     background-color: #222;
     font-weight: bold;
+    font-size: 16px; /* Font size for table headers */
 }
 
 table tr:hover {
@@ -70,14 +84,14 @@ input[type="number"] {
 }
 
 button {
-    padding: 15px;
-    margin-top: 20px;
+    padding: 8px;
+    margin-top: 4px;
     border: none;
     background-color: #444;
     color: #fff;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 16px; /* Font size for buttons */
     width: 100%;
     transition: background-color 0.3s ease;
 }
@@ -98,6 +112,7 @@ button.clear-selection:hover {
 @media (max-width: 600px) {
     body {
         padding: 10px;
+        font-size: 14px; /* Responsive font size */
     }
     
     .container {
@@ -106,6 +121,7 @@ button.clear-selection:hover {
 
     table th, table td {
         padding: 8px;
+        font-size: 12px; /* Responsive font size for table text */
     }
 
     button {
