@@ -1,6 +1,7 @@
 /* General Styles */
 /* Styles for the body element */
 body {
+<<<<<<< HEAD
     font-family: Arial, sans-serif; /* Font family for the body */
     background-color: #212422; /* Background color for the body */
     color: #fff; /* Text color */
@@ -12,6 +13,19 @@ body {
     padding: 20px; /* Padding around the body */
     box-sizing: border-box; /* Include padding and border in element's total width and height */
     overflow-x: hidden; /* Hide horizontal overflow */
+=======
+    font-family: Arial, sans-serif;
+    background-color: #212422;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+>>>>>>> 82a567345fbf97aea7303704756823c5adf81d06
     font-size: 16px; /* Default font size */
 }
 
@@ -27,10 +41,26 @@ body {
     overflow-x: auto; /* Allow horizontal scrolling */
 }
 
+<<<<<<< HEAD
 /* Styles for h1 headers */
 h1 {
     color: #fff; /* Text color */
     font-size: 30px; /* Font size */
+=======
+h1 {
+    color: #fff;
+    font-size: 30px; /* Font size for h1 */
+}
+
+h2 {
+    color: #fff;
+    font-size: 20px; /* Font size for h2 */
+}
+
+p {
+    color: #fff;
+    font-size: 14px; /* Font size for paragraphs */
+>>>>>>> 82a567345fbf97aea7303704756823c5adf81d06
 }
 
 /* Styles for h2 headers */
@@ -60,19 +90,34 @@ table {
 
 /* Styles for table headers and cells */
 table th, table td {
+<<<<<<< HEAD
     border: 2px solid #555; /* Border around cells */
     padding: 12px; /* Padding inside cells */
     text-align: left; /* Align text to the left */
     word-wrap: break-word; /* Wrap long words */
     color: #fff; /* Text color */
     font-size: 16px; /* Font size */
+=======
+    border: 2px solid #555;
+    padding: 12px;
+    text-align: left;
+    word-wrap: break-word;
+    color: #fff;
+    font-size: 16px; /* Font size for table text */
+>>>>>>> 82a567345fbf97aea7303704756823c5adf81d06
 }
 
 /* Styles for table headers */
 table th {
+<<<<<<< HEAD
     background-color: #222; /* Background color */
     font-weight: bold; /* Bold text */
     font-size: 16px; /* Font size */
+=======
+    background-color: #222;
+    font-weight: bold;
+    font-size: 16px; /* Font size for table headers */
+>>>>>>> 82a567345fbf97aea7303704756823c5adf81d06
 }
 
 /* Hover effect for table rows */
@@ -97,6 +142,7 @@ input[type="number"] {
 
 /* Styles for buttons */
 button {
+<<<<<<< HEAD
     padding: 8px; /* Padding inside the button */
     margin-top: 4px; /* Margin at the top */
     border: none; /* No border */
@@ -107,6 +153,18 @@ button {
     font-size: 16px; /* Font size */
     width: 100%; /* Full width */
     transition: background-color 0.3s ease; /* Transition for background color */
+=======
+    padding: 8px;
+    margin-top: 4px;
+    border: none;
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px; /* Font size for buttons */
+    width: 100%;
+    transition: background-color 0.3s ease;
+>>>>>>> 82a567345fbf97aea7303704756823c5adf81d06
 }
 
 /* Hover effect for buttons */
@@ -128,8 +186,13 @@ button.clear-selection:hover {
 /* Styles for screens with a maximum width of 600px */
 @media (max-width: 600px) {
     body {
+<<<<<<< HEAD
         padding: 10px; /* Reduced padding */
         font-size: 14px; /* Smaller font size */
+=======
+        padding: 10px;
+        font-size: 14px; /* Responsive font size */
+>>>>>>> 82a567345fbf97aea7303704756823c5adf81d06
     }
     
     .container {
@@ -137,8 +200,13 @@ button.clear-selection:hover {
     }
 
     table th, table td {
+<<<<<<< HEAD
         padding: 8px; /* Reduced padding inside cells */
         font-size: 12px; /* Smaller font size */
+=======
+        padding: 8px;
+        font-size: 12px; /* Responsive font size for table text */
+>>>>>>> 82a567345fbf97aea7303704756823c5adf81d06
     }
 
     button {
